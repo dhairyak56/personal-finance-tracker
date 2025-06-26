@@ -115,7 +115,3 @@ personal-finance-tracker/
 └── README.md          # This file
 ```
 
-## License
-
-This project is licensed under the MIT License.
-See [LICENSE](LICENSE) for details.

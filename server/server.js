@@ -10,6 +10,8 @@ dotenv.config();
 const userRoutes = require('./routes/userRoutes');
 const transactionRoutes = require('./routes/transactionRoutes');
 const budgetRoutes = require('./routes/budgetRoutes');
+const aiRoutes = require('./routes/aiRoutes');
+const goalRoutes = require('./routes/goalRoutes');
 
 // Import database connection
 const { db } = require('./config/db');
@@ -25,6 +27,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api/users', userRoutes);
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/budgets', budgetRoutes);
+app.use('/api/ai', aiRoutes);
+app.use('/api/goals', goalRoutes);
 
 // Health check route
 app.get('/api/health', (req, res) => {

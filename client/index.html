@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        section { margin-bottom: 40px; }
+        input, button { padding: 5px; margin: 5px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+<h1>Personal Finance Tracker</h1>
+<section id="auth">
+    <h2>Login</h2>
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="login-status"></p>
+</section>
+<section id="goals" class="hidden">
+    <h2>Goals</h2>
+    <input id="goal-name" placeholder="Goal name">
+    <input id="goal-amount" placeholder="Target amount" type="number">
+    <input id="goal-date" type="date">
+    <button onclick="createGoal()">Add Goal</button>
+    <ul id="goal-list"></ul>
+</section>
+<section id="ai" class="hidden">
+    <h2>AI Insights</h2>
+    <button onclick="loadPrediction()">Get Spending Prediction</button>
+    <pre id="prediction"></pre>
+</section>
+<script src="script.js"></script>
+</body>
+</html>

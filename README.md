@@ -23,6 +23,8 @@ Personal Finance Tracker is a full-stack application combining a Node.js/Express
 * **Budget Tracking**: Set monthly budgets and compare actual vs. planned spending.
 * **Spending Summaries**: View monthly totals and category breakdowns.
 * **AI-Powered Insights**: 30-day spending forecasts, anomaly detection, and personalized saving tips.
+* **Integrated AI Endpoints**: Express server proxies the Flask AI microservice, providing predictions and recommendations under `/api/ai`.
+* **Savings Goals**: Set personal savings goals and track progress over time.
 * **Front-End Dashboard**: Lightweight HTML, CSS, and vanilla JavaScript interface.
 
 ## Technologies Used
@@ -70,6 +72,7 @@ DB_PASSWORD=your_db_password
 DB_NAME=finance_tracker
 JWT_SECRET=your_jwt_secret
 PORT=5000
+AI_SERVICE_URL=http://localhost:8000
 
 # ai-service/.env
 PORT=8000
@@ -94,6 +97,7 @@ PORT=8000
    ```
 
    Runs at `http://localhost:8000`
+   The Express API will proxy these features under `/api/ai`.
 3. **Serve the front-end**
    Use any static server, e.g.:
 
@@ -114,4 +118,16 @@ personal-finance-tracker/
 ├── package.json       # Node.js dependencies & scripts
 └── README.md          # This file
 ```
+
+## API Endpoints
+
+| Method | Endpoint | Description |
+| ------ | -------- | ----------- |
+| POST   | `/api/users/register` | Register a new user |
+| POST   | `/api/users/login` | User login |
+| GET    | `/api/transactions` | List user transactions |
+| GET    | `/api/budgets` | List budgets |
+| GET    | `/api/ai/prediction` | AI spending prediction |
+| GET    | `/api/goals` | List savings goals |
+
 

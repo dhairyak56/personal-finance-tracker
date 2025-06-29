@@ -211,7 +211,7 @@ def get_spending_insights(user_id):
     except Exception as e:
         print(f"Error in spending insights: {str(e)}")
         return jsonify({'error': str(e)}), 500
-prin
+
 @app.route('/api/ai/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""

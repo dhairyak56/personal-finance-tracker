@@ -62,10 +62,11 @@ Personal Finance Tracker is a full-stack application combining a Node.js/Express
 
 ## Configuration
 
-Create a `.env` file in the project root and in `ai-service/`:
+Copy the provided `.env.example` files to `.env` in both the project root and
+inside `ai-service/`, then adjust the values as needed:
 
 ```ini
-# Root .env
+# .env.example (root)
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_db_password
@@ -74,7 +75,11 @@ JWT_SECRET=your_jwt_secret
 PORT=5000
 AI_SERVICE_URL=http://localhost:8000
 
-# ai-service/.env
+# ai-service/.env.example
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_db_password
+DB_NAME=finance_tracker
 PORT=8000
 ```
 

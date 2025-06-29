@@ -1,0 +1,4 @@
+# Ignore local virtual environments and dependencies
+.venv/
+ai-service/venv/
+node_modules/

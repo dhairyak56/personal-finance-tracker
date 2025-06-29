@@ -59,6 +59,9 @@ Personal Finance Tracker is a full-stack application combining a Node.js/Express
    ```
 4. **Prepare front-end (no extra dependencies)**
    The client is static HTML/CSS/JS.
+   If hosting the client separately from the server, set `window.API_BASE_URL`
+   before loading `script.js` to point at your API endpoint. It defaults to
+   `http://localhost:5000/api`.
 
 ## Configuration
 

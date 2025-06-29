@@ -1,5 +1,8 @@
 let token = '';
-const API = 'http://localhost:5000/api';
+// Allow overriding the API base URL via a global variable, e.g.:
+// <script>window.API_BASE_URL = 'https://example.com/api';</script>
+// Defaults to the local development server.
+const API = window.API_BASE_URL || 'http://localhost:5000/api';
 let chart;
 
 async function login() {

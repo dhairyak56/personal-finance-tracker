@@ -107,6 +107,20 @@ PORT=8000
 
    Open `http://localhost:3000`.
 
+## Development Scripts
+
+- **Run tests**:
+
+  ```bash
+  npm test
+  ```
+
+- **Run ESLint**:
+
+  ```bash
+  npm run lint
+  ```
+
 ## Project Structure
 
 ```

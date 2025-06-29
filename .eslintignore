@@ -1,0 +1,6 @@
+node_modules
+.venv
+ai-service/venv
+client
+**/venv
+**/.venv

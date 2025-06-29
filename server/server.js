@@ -13,8 +13,8 @@ const budgetRoutes = require('./routes/budgetRoutes');
 const aiRoutes = require('./routes/aiRoutes');
 const goalRoutes = require('./routes/goalRoutes');
 
-// Import database connection
-const { db } = require('./config/db');
+// Import database connection to initialize MySQL
+require('./config/db');
 
 const app = express();
 
@@ -36,12 +36,18 @@ app.get('/api/health', (req, res) => {
 });
 
 // Error handling middleware
+/* eslint-disable-next-line no-unused-vars */
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).json({ error: 'Something went wrong!' });
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
+}
+
+module.exports = app;

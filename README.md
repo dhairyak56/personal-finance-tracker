@@ -25,7 +25,7 @@ Personal Finance Tracker is a full-stack application combining a Node.js/Express
 * **AI-Powered Insights**: 30-day spending forecasts, anomaly detection, and personalized saving tips.
 * **Integrated AI Endpoints**: Express server proxies the Flask AI microservice, providing predictions and recommendations under `/api/ai`.
 * **Savings Goals**: Set personal savings goals and track progress over time.
-* **Front-End Dashboard**: Lightweight HTML, CSS, and vanilla JavaScript interface.
+* **Front-End Dashboard**: Modern Bootstrap UI with interactive charts.
 
 ## Technologies Used
 
@@ -34,7 +34,7 @@ Personal Finance Tracker is a full-stack application combining a Node.js/Express
 * **MySQL**: Relational database via `mysql2`.
 * **JWT**: JSON Web Tokens for authentication.
 * **dotenv**: Environment variable management.
-* **HTML/CSS/JavaScript**: Static front-end.
+* **HTML/CSS/JavaScript (Bootstrap 5, Chart.js)**: Static front-end.
 * **npm & pip**: Dependency management.
 
 ## Installation
